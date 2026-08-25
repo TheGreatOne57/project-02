@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const opening = document.getElementById("opening");
     const universe = document.getElementById("universe");
-    const enterButton = document.getElementById("enterButton");
+ const enterButton =
+    document.getElementById("enterButton") ||
+    document.querySelector(".enter-btn");;
 
     const orbitItems =
         document.querySelectorAll(".orbit-item");
@@ -53,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
        ENTER THE UNIVERSE
        ========================================= */
 
+    if (enterButton) {
+
     enterButton.addEventListener("click", () => {
 
         opening.classList.remove("active");
@@ -62,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500);
 
     });
+
+}
 
 
     /* =========================================
