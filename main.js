@@ -58,9 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (enterButton) {
 
     enterButton.addEventListener("click", () => {
-
         opening.classList.remove("active");
-
         setTimeout(() => {
             universe.classList.add("active");
         }, 500);
