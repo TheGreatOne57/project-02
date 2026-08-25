@@ -1003,3 +1003,35 @@ outline: none;
         font-size: 0.54rem;
     }
 }
+
+/* =========================================
+   HER WORLD BACK BUTTON
+   ========================================= */
+
+#julia .back-to-universe {
+    position: absolute;
+
+    top: 1.5rem;
+    left: 1.2rem;
+
+    z-index: 20;
+
+    display: block;
+
+    color: rgba(255, 248, 252, 0.65);
+
+    font-family: inherit;
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    border: 0;
+    background: transparent;
+
+    padding: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+}
