@@ -5,6 +5,34 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* =========================================
+       CREATE AMBIENT PARTICLES
+       ========================================= */
+
+    const particleContainer = document.getElementById("particles");
+
+    for (let i = 0; i < 35; i++) {
+
+        const particle = document.createElement("div");
+
+        particle.classList.add("particle");
+
+        particle.style.left = `${Math.random() * 100}%`;
+
+        particle.style.animationDuration =
+            `${8 + Math.random() * 12}s`;
+
+        particle.style.animationDelay =
+            `${Math.random() * 10}s`;
+
+        const size = 1 + Math.random() * 2;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+
+        particleContainer.appendChild(particle);
+    }
+
     const opening = document.getElementById("opening");
     const universe = document.getElementById("universe");
     const enterButton = document.getElementById("enterButton");
