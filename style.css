@@ -1,0 +1,365 @@
+/* =========================================
+   PROJECT 02 — GLOBAL STYLES
+   Two Months With My Princess
+   ========================================= */
+
+:root {
+    --bg: #08060a;
+    --pink: #f5a6c8;
+    --pink-soft: #f8c8dc;
+    --white: #fff8fc;
+    --muted: #b9aab3;
+    --glow: rgba(245, 166, 200, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* =========================================
+   GENERAL SCREEN SYSTEM
+   ========================================= */
+
+.screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+
+    overflow: hidden;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================================
+   OPENING SCREEN
+   ========================================= */
+
+#opening {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245, 166, 200, 0.08),
+            transparent 35%
+        ),
+        #08060a;
+}
+
+.opening-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(6rem, 25vw, 11rem);
+    font-weight: 300;
+    line-height: 0.8;
+    letter-spacing: 0.05em;
+
+    color: var(--white);
+
+    text-shadow:
+        0 0 20px var(--glow),
+        0 0 60px rgba(245, 166, 200, 0.15);
+
+    animation: numberGlow 4s ease-in-out infinite;
+}
+
+.subtitle {
+    margin-top: 1.2rem;
+
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+
+    color: var(--pink-soft);
+}
+
+.small-text {
+    margin-top: 0.7rem;
+
+    font-size: 1rem;
+    font-style: italic;
+
+    color: var(--muted);
+}
+
+/* =========================================
+   ENTER BUTTON
+   ========================================= */
+
+#enterButton {
+    margin-top: 4rem;
+
+    padding: 0.95rem 1.6rem;
+
+    border: 1px solid rgba(245, 166, 200, 0.45);
+    border-radius: 999px;
+
+    background: rgba(245, 166, 200, 0.04);
+
+    color: var(--pink-soft);
+
+    font-family: inherit;
+    font-size: 0.85rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+#enterButton:hover,
+#enterButton:active {
+    transform: translateY(-2px);
+
+    background: rgba(245, 166, 200, 0.1);
+
+    box-shadow:
+        0 0 25px rgba(245, 166, 200, 0.15);
+}
+
+/* =========================================
+   MAIN UNIVERSE
+   ========================================= */
+
+#universe {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245, 166, 200, 0.07),
+            transparent 30%
+        ),
+        #08060a;
+}
+
+.universe-content {
+    position: relative;
+
+    width: min(90vw, 700px);
+    height: min(90vw, 700px);
+
+    max-height: 90vh;
+}
+
+/* =========================================
+   CENTER
+   ========================================= */
+
+.center-heart {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+
+    letter-spacing: 0.1em;
+
+    text-shadow:
+        0 0 20px rgba(245, 166, 200, 0.35);
+}
+
+.center-heart .heart {
+    color: var(--pink);
+
+    font-size: 1.3em;
+
+    animation: heartPulse 2.5s ease-in-out infinite;
+}
+
+/* =========================================
+   ORBIT ITEMS
+   ========================================= */
+
+.orbit-item {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+
+    width: 100px;
+
+    color: var(--pink-soft);
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.orbit-item span {
+    font-size: 0.65rem;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    letter-spacing: 0.04em;
+}
+
+.orbit-item:hover,
+.orbit-item:active {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 12px rgba(245, 166, 200, 0.45));
+}
+
+/* Positions */
+
+.item-1 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-2 {
+    top: 25%;
+    right: 4%;
+}
+
+.item-3 {
+    bottom: 22%;
+    right: 2%;
+}
+
+.item-4 {
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-5 {
+    bottom: 22%;
+    left: 2%;
+}
+
+.item-6 {
+    top: 25%;
+    left: 4%;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes numberGlow {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.025);
+        opacity: 1;
+    }
+}
+
+@keyframes heartPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   MOBILE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .universe-content {
+        width: 95vw;
+        height: 95vw;
+    }
+
+    .orbit-item {
+        width: 85px;
+        font-size: 1.7rem;
+    }
+
+    .orbit-item span {
+        font-size: 0.58rem;
+    }
+
+    .item-2 {
+        right: 0;
+    }
+
+    .item-3 {
+        right: 0;
+    }
+
+    .item-5 {
+        left: 0;
+    }
+
+    .item-6 {
+        left: 0;
+    }
+
+    #enterButton {
+        margin-top: 3rem;
+        font-size: 0.75rem;
+    }
+}
