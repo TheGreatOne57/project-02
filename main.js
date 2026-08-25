@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const orbitItems = document.querySelectorAll(".orbit-item");
 
+    const backButtons = document.querySelectorAll(".back-to-universe");
+
 
     /* =========================================
        ENTER THE UNIVERSE
@@ -78,6 +80,30 @@ orbitItems.forEach((item) => {
 
             targetSection.classList.add("active");
 
+        }, 500);
+
+    });
+
+  });
+
+  /* =========================================
+   BACK TO UNIVERSE
+   ========================================= */
+
+backButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const currentScreen = button.closest(".screen");
+
+        if (!currentScreen) {
+            return;
+        }
+
+        currentScreen.classList.remove("active");
+
+        setTimeout(() => {
+            universe.classList.add("active");
         }, 500);
 
     });
