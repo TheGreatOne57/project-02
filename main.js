@@ -42,72 +42,56 @@ document.addEventListener("DOMContentLoaded", () => {
     const backButtons = document.querySelectorAll(".back-to-universe");
 
 
-    /* =========================================
-       ENTER THE UNIVERSE
+     /* =========================================
+       UNIVERSE ITEMS
        ========================================= */
 
-    enterButton.addEventListener("click", () => {
+    orbitItems.forEach((item) => {
 
-        opening.classList.remove("active");
+        item.addEventListener("click", () => {
 
-        setTimeout(() => {
-            universe.classList.add("active");
-        }, 500);
+            const section = item.dataset.section;
+            const targetSection = document.getElementById(section);
+
+            if (!targetSection) {
+                console.log(`Section not found: ${section}`);
+                return;
+            }
+
+            universe.classList.remove("active");
+
+            setTimeout(() => {
+                targetSection.classList.add("active");
+            }, 500);
+
+        });
 
     });
 
 
     /* =========================================
-   UNIVERSE ITEMS
-   ========================================= */
+       BACK TO UNIVERSE
+       ========================================= */
 
-orbitItems.forEach((item) => {
+    backButtons.forEach((button) => {
 
-    item.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
-        const section = item.dataset.section;
+            const currentScreen = button.closest(".screen");
 
-        const targetSection = document.getElementById(section);
+            if (!currentScreen) {
+                console.log("Back button could not find its screen.");
+                return;
+            }
 
-        if (!targetSection) {
-            console.log(`Section not found: ${section}`);
-            return;
-        }
+            currentScreen.classList.remove("active");
 
-        universe.classList.remove("active");
+            setTimeout(() => {
+                universe.classList.add("active");
+            }, 500);
 
-        setTimeout(() => {
-
-            targetSection.classList.add("active");
-
-        }, 500);
+        });
 
     });
-
-  });
-
-  /* =========================================
-   BACK TO UNIVERSE
-   ========================================= */
-
-backButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-        const currentScreen = button.closest(".screen");
-
-        if (!currentScreen) {
-            return;
-        }
-
-        currentScreen.classList.remove("active");
-
-        setTimeout(() => {
-            universe.classList.add("active");
-        }, 500);
-
-    });
-
-  });
 
 });
