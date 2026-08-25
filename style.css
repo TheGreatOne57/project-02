@@ -726,3 +726,280 @@ outline: none;
     position: relative !important;
     top: -4px !important;
 }
+
+/* =========================================
+   HER WORLD
+   ========================================= */
+
+#julia {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(245, 166, 200, 0.12),
+            transparent 38%
+        ),
+        #08060a;
+
+    overflow-y: auto;
+}
+
+.julia-world {
+    width: min(92vw, 650px);
+    min-height: 100%;
+    padding: 4.5rem 1.2rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+/* Back button */
+
+.back-to-universe {
+    align-self: flex-start;
+
+    border: 0;
+    background: transparent;
+
+    color: rgba(255, 248, 252, 0.55);
+
+    font-family: inherit;
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.back-to-universe:hover,
+.back-to-universe:active {
+    color: var(--pink-soft);
+    transform: translateX(-3px);
+}
+
+/* Header */
+
+.julia-header {
+    margin-top: 2.5rem;
+
+    text-align: center;
+
+    max-width: 500px;
+}
+
+.julia-star {
+    display: block;
+
+    color: var(--pink-soft);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    text-shadow:
+        0 0 18px rgba(245, 166, 200, 0.45);
+
+    animation: heartPulse 3s ease-in-out infinite;
+}
+
+.julia-eyebrow {
+    margin: 0 0 0.5rem;
+
+    color: rgba(255, 248, 252, 0.45);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.julia-header h1 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 10vw, 4rem);
+
+    font-weight: 300;
+
+    letter-spacing: 0.04em;
+
+    text-shadow:
+        0 0 25px rgba(245, 166, 200, 0.18);
+}
+
+.julia-intro {
+    margin: 1rem auto 0;
+
+    max-width: 360px;
+
+    color: rgba(255, 248, 252, 0.58);
+
+    font-size: 0.78rem;
+
+    line-height: 1.8;
+}
+
+/* Constellation */
+
+.julia-constellation {
+    width: 100%;
+
+    margin-top: 2.5rem;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0.8rem;
+}
+
+.julia-card {
+    min-height: 135px;
+
+    padding: 1.2rem 0.9rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid rgba(245, 166, 200, 0.13);
+
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(245, 166, 200, 0.08),
+            transparent 65%
+        ),
+        rgba(255, 255, 255, 0.015);
+
+    box-shadow:
+        0 0 20px rgba(245, 166, 200, 0.025);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.julia-card:active {
+    transform: translateY(-3px);
+
+    border-color: rgba(245, 166, 200, 0.3);
+
+    box-shadow:
+        0 0 25px rgba(245, 166, 200, 0.08);
+}
+
+.julia-card > span {
+    font-size: 1.35rem;
+
+    margin-bottom: 0.55rem;
+}
+
+.julia-card h2 {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.86);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.9rem;
+
+    font-weight: normal;
+}
+
+.julia-card p {
+    margin: 0.4rem 0 0;
+
+    color: rgba(255, 248, 252, 0.42);
+
+    font-size: 0.58rem;
+
+    line-height: 1.5;
+}
+
+/* Footer */
+
+.julia-footer {
+    margin-top: 3rem;
+
+    text-align: center;
+
+    max-width: 390px;
+}
+
+.julia-footer p {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.62);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+}
+
+.julia-footer-soft {
+    margin-top: 0.45rem !important;
+
+    color: var(--pink-soft) !important;
+
+    font-style: italic;
+
+    font-size: 0.72rem !important;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .julia-world {
+        padding-top: 3.5rem;
+    }
+
+    .julia-header {
+        margin-top: 2rem;
+    }
+
+    .julia-intro {
+        font-size: 0.72rem;
+    }
+
+    .julia-constellation {
+        margin-top: 2rem;
+        gap: 0.65rem;
+    }
+
+    .julia-card {
+        min-height: 125px;
+        padding: 1rem 0.7rem;
+    }
+
+    .julia-card h2 {
+        font-size: 0.82rem;
+    }
+
+    .julia-card p {
+        font-size: 0.54rem;
+    }
+}
