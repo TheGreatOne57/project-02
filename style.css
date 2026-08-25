@@ -363,3 +363,63 @@ body {
         font-size: 0.75rem;
     }
 }
+
+/* =========================================
+   AMBIENT PARTICLES
+   ========================================= */
+
+#particles {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.particle {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 220, 235, 0.85);
+
+    box-shadow:
+        0 0 8px rgba(245, 166, 200, 0.7),
+        0 0 14px rgba(245, 166, 200, 0.25);
+
+    animation:
+        particleFloat linear infinite,
+        particleFade ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+
+    from {
+        transform: translateY(110vh);
+    }
+
+    to {
+        transform: translateY(-10vh);
+    }
+
+}
+
+@keyframes particleFade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+    }
+
+}
