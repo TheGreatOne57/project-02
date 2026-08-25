@@ -161,138 +161,6 @@ body {
 }
 
 /* =========================================
-   MAIN UNIVERSE
-   ========================================= */
-
-#universe {
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(245, 166, 200, 0.07),
-            transparent 30%
-        ),
-        #08060a;
-}
-
-.universe-content {
-    position: relative;
-
-    width: min(90vw, 700px);
-    height: min(90vw, 700px);
-
-    max-height: 90vh;
-}
-
-/* =========================================
-   CENTER
-   ========================================= */
-
-.center-heart {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-
-    letter-spacing: 0.1em;
-
-    text-shadow:
-        0 0 20px rgba(245, 166, 200, 0.35);
-}
-
-.center-heart .heart {
-    color: var(--pink);
-
-    font-size: 1.3em;
-
-    animation: heartPulse 2.5s ease-in-out infinite;
-}
-
-/* =========================================
-   ORBIT ITEMS
-   ========================================= */
-
-.orbit-item {
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.45rem;
-
-    width: 100px;
-
-    color: var(--pink-soft);
-
-    font-size: 2rem;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.4s ease,
-        filter 0.4s ease;
-}
-
-.orbit-item span {
-    font-size: 0.65rem;
-
-    text-align: center;
-
-    color: var(--muted);
-
-    letter-spacing: 0.04em;
-}
-
-.orbit-item:hover,
-.orbit-item:active {
-    transform: scale(1.12);
-
-    filter:
-        drop-shadow(0 0 12px rgba(245, 166, 200, 0.45));
-}
-
-/* Positions */
-
-.item-1 {
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.item-2 {
-    top: 25%;
-    right: 4%;
-}
-
-.item-3 {
-    bottom: 22%;
-    right: 2%;
-}
-
-.item-4 {
-    bottom: 4%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.item-5 {
-    bottom: 22%;
-    left: 2%;
-}
-
-.item-6 {
-    top: 25%;
-    left: 4%;
-}
-
-/* =========================================
    ANIMATIONS
    ========================================= */
 
@@ -840,13 +708,9 @@ outline: none;
    ========================================= */
 
 #universe .center-heart .initial {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
 
     width: 1.6rem;
-    height: 2.2rem;
 
     font-size: 1.6rem;
     font-weight: 400;
@@ -857,5 +721,5 @@ outline: none;
 }
 
 #universe .center-heart .initial-j {
-    font-size: 1.35rem;
+    font-size: 1.3rem !important;
 }
