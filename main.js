@@ -59,8 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     enterButton.addEventListener("click", () => {
 
-        alert("ENTER BUTTON WORKS");
-
         opening.classList.remove("active");
 
         setTimeout(() => {
