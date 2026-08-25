@@ -834,3 +834,25 @@ outline: none;
     }
 
 }
+
+/* =========================================
+   BALANCE S + J
+   ========================================= */
+
+#universe .center-heart .initial {
+    display: inline-block;
+
+    font-size: 1em;
+    font-weight: normal;
+
+    line-height: 1;
+
+    transform: scaleY(0.94);
+}
+
+#universe .center-heart .initial-s,
+#universe .center-heart .initial-j {
+    width: 1em;
+
+    text-align: center;
+}
