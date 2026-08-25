@@ -722,4 +722,7 @@ outline: none;
 
 #universe .center-heart .initial-j {
     font-size: 1.3rem !important;
+
+    position: relative;
+    top: -2px;
 }
