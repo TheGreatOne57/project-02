@@ -840,23 +840,22 @@ outline: none;
    ========================================= */
 
 #universe .center-heart .initial {
-    display: inline-block;
+    display: inline-flex;
 
-    font-size: 1em;
-    font-weight: normal;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.6rem;
+    height: 2.2rem;
+
+    font-size: 1.6rem;
+    font-weight: 400;
 
     line-height: 1;
-
-    transform: scaleY(0.94);
-}
-
-#universe .center-heart .initial-s,
-#universe .center-heart .initial-j {
-    width: 1em;
 
     text-align: center;
 }
 
 #universe .center-heart .initial-j {
-    transform: scale(0.82, 0.94);
+    font-size: 1.35rem;
 }
