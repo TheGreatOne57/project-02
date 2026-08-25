@@ -1040,3 +1040,20 @@ outline: none;
 
     cursor: pointer;
 }
+/* Her World card details */
+
+.julia-card small {
+    display: block;
+
+    margin-top: 0.55rem;
+
+    color: rgba(245, 166, 200, 0.55);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.52rem;
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
