@@ -721,8 +721,8 @@ outline: none;
 }
 
 #universe .center-heart .initial-j {
-    font-size: 1.3rem !important;
+    font-size: 1.35rem !important;
 
-    position: relative;
-    top: -6px;
+    position: relative !important;
+    top: -4px !important;
 }
