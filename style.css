@@ -1009,14 +1009,17 @@ outline: none;
    ========================================= */
 
 #julia .back-to-universe {
-    position: absolute;
+    position: fixed;
 
     top: 1.5rem;
     left: 1.2rem;
 
-    z-index: 20;
+    z-index: 9999;
 
     display: block;
+
+    width: auto;
+    height: auto;
 
     color: rgba(255, 248, 252, 0.65);
 
@@ -1028,10 +1031,12 @@ outline: none;
     border: 0;
     background: transparent;
 
-    padding: 0;
+    padding: 0.6rem;
 
     appearance: none;
     -webkit-appearance: none;
+
+    pointer-events: auto;
 
     cursor: pointer;
 }
