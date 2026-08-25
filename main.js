@@ -56,30 +56,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =========================================
-       UNIVERSE ITEMS
-       ========================================= */
+   UNIVERSE ITEMS
+   ========================================= */
 
-    orbitItems.forEach((item) => {
+orbitItems.forEach((item) => {
 
-        item.addEventListener("click", () => {
+    item.addEventListener("click", () => {
 
-            const section = item.dataset.section;
+        const section = item.dataset.section;
 
-            console.log(`Julia opened: ${section}`);
+        const targetSection = document.getElementById(section);
 
-            /*
-             * These sections will be built later.
-             * For now, we'll simply give visual feedback.
-             */
+        if (!targetSection) {
+            console.log(`Section not found: ${section}`);
+            return;
+        }
 
-            item.style.transform = "scale(1.18)";
+        universe.classList.remove("active");
 
-            setTimeout(() => {
-                item.style.transform = "";
-            }, 300);
+        setTimeout(() => {
 
-        });
+            targetSection.classList.add("active");
+
+        }, 500);
 
     });
+
+  });
 
 });
