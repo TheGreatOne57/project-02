@@ -1731,3 +1731,239 @@ outline: none;
     }
 
 }
+/* =========================================
+   FIRST KISS — INTERACTIVE JOURNEY
+   ========================================= */
+
+.kiss-intro {
+    margin: 0.45rem 0 0 !important;
+
+    color: rgba(245, 166, 200, 0.58) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.68rem !important;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+.kiss-journey {
+    margin-top: 1.5rem;
+
+    width: 100%;
+}
+
+.kiss-step {
+    display: none;
+
+    padding: 1.2rem;
+
+    border: 1px solid rgba(245, 166, 200, 0.12);
+
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(245, 166, 200, 0.07),
+            transparent 70%
+        );
+
+    text-align: center;
+
+    animation: kissStepIn 0.45s ease;
+}
+
+.kiss-step.active {
+    display: block;
+}
+
+.kiss-step-number {
+    display: block;
+
+    margin-bottom: 0.65rem;
+
+    color: rgba(245, 166, 200, 0.48);
+
+    font-size: 0.52rem;
+
+    letter-spacing: 0.15em;
+}
+
+.kiss-step h3 {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.88);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    font-weight: normal;
+}
+
+.kiss-step p:not(.kiss-dialogue):not(.memory-hair) {
+    margin: 0.75rem 0 0;
+
+    color: rgba(255, 248, 252, 0.54);
+
+    font-size: 0.65rem;
+
+    line-height: 1.7;
+}
+
+.kiss-dialogue {
+    margin: 1rem 0 0 !important;
+
+    color: rgba(245, 166, 200, 0.72) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.72rem !important;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+.kiss-step .memory-hair {
+    margin: 0.8rem 0 0 !important;
+
+    color: var(--pink-soft) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.9rem !important;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+.kiss-next,
+.kiss-final {
+    margin-top: 1.2rem;
+
+    padding: 0.65rem 1rem;
+
+    border: 1px solid rgba(245, 166, 200, 0.22);
+
+    border-radius: 999px;
+
+    background: rgba(245, 166, 200, 0.05);
+
+    color: rgba(255, 248, 252, 0.72);
+
+    font-family: inherit;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.kiss-next:active,
+.kiss-final:active {
+    transform: scale(0.96);
+
+    background: rgba(245, 166, 200, 0.12);
+
+    border-color: rgba(245, 166, 200, 0.40);
+}
+
+.kiss-final {
+    color: rgba(245, 166, 200, 0.82);
+}
+
+.kiss-reveal {
+    display: none;
+
+    margin-top: 1rem;
+
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+
+    animation: kissReveal 0.8s ease;
+}
+
+.kiss-reveal.active {
+    display: block;
+}
+
+.kiss-reveal-heart {
+    display: block;
+
+    font-size: 1.7rem;
+
+    filter:
+        drop-shadow(
+            0 0 14px rgba(245, 166, 200, 0.4)
+        );
+}
+
+.kiss-reveal h3 {
+    margin: 0.6rem 0 0;
+
+    color: rgba(255, 248, 252, 0.9);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.25rem;
+
+    font-weight: normal;
+}
+
+.kiss-reveal p:not(.memory-soft) {
+    margin: 0.7rem 0 0;
+
+    color: rgba(245, 166, 200, 0.72);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.78rem;
+
+    line-height: 1.6;
+}
+
+.kiss-reveal .memory-soft {
+    margin-top: 0.7rem !important;
+}
+
+/* Kiss animations */
+
+@keyframes kissStepIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes kissReveal {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
