@@ -1059,3 +1059,432 @@ outline: none;
 
     line-height: 1.4;
 }
+/* =========================================
+   OUR FIRSTS
+   ========================================= */
+
+#firsts {
+    background:
+        radial-gradient(
+            circle at 50% 18%,
+            rgba(245, 166, 200, 0.10),
+            transparent 38%
+        ),
+        #08060a;
+
+    overflow-y: auto;
+}
+
+.firsts-world {
+    width: min(92vw, 650px);
+    min-height: 100%;
+
+    padding: 4.5rem 1.2rem 3.5rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Back button */
+
+#firsts .back-to-universe {
+    position: absolute;
+
+    top: 1.5rem;
+    left: 1.2rem;
+
+    z-index: 20;
+
+    display: block;
+
+    color: rgba(255, 248, 252, 0.65);
+
+    font-family: inherit;
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    border: 0;
+    background: transparent;
+
+    padding: 0.6rem;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+}
+
+/* Header */
+
+.firsts-header {
+    margin-top: 2rem;
+
+    max-width: 500px;
+
+    text-align: center;
+}
+
+.firsts-star {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--pink-soft);
+
+    font-size: 1.4rem;
+
+    text-shadow:
+        0 0 18px rgba(245, 166, 200, 0.45);
+
+    animation: heartPulse 3s ease-in-out infinite;
+}
+
+.firsts-eyebrow {
+    margin: 0 0 0.5rem;
+
+    color: rgba(255, 248, 252, 0.42);
+
+    font-size: 0.56rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.firsts-header h1 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 10vw, 4rem);
+
+    font-weight: 300;
+
+    letter-spacing: 0.04em;
+
+    text-shadow:
+        0 0 25px rgba(245, 166, 200, 0.18);
+}
+
+.firsts-intro {
+    max-width: 380px;
+
+    margin: 1rem auto 0;
+
+    color: rgba(255, 248, 252, 0.55);
+
+    font-size: 0.74rem;
+
+    line-height: 1.8;
+}
+
+/* Story */
+
+.firsts-story {
+    width: 100%;
+
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.3rem;
+}
+
+/* Memory cards */
+
+.first-memory {
+    position: relative;
+
+    padding: 1.4rem 1.2rem 1.5rem 4rem;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(245, 166, 200, 0.12);
+
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(245, 166, 200, 0.07),
+            transparent 55%
+        ),
+        rgba(255, 255, 255, 0.015);
+
+    box-shadow:
+        0 0 20px rgba(245, 166, 200, 0.025);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.first-memory:active {
+    transform: translateY(-3px);
+
+    border-color: rgba(245, 166, 200, 0.28);
+
+    box-shadow:
+        0 0 28px rgba(245, 166, 200, 0.08);
+}
+
+/* Memory number */
+
+.memory-number {
+    position: absolute;
+
+    top: 1.35rem;
+    left: 1.1rem;
+
+    color: rgba(245, 166, 200, 0.48);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.08em;
+}
+
+/* Memory content */
+
+.memory-label {
+    margin: 0 0 0.55rem;
+
+    color: rgba(245, 166, 200, 0.52);
+
+    font-size: 0.52rem;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.memory-content h2 {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.9);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.15rem;
+
+    font-weight: normal;
+
+    line-height: 1.3;
+}
+
+.memory-content > p:not(.memory-label):not(.memory-quote):not(.memory-hair):not(.memory-soft):not(.memory-funny) {
+    margin: 0.75rem 0 0;
+
+    color: rgba(255, 248, 252, 0.52);
+
+    font-size: 0.68rem;
+
+    line-height: 1.7;
+}
+
+/* Soft memory lines */
+
+.memory-soft {
+    margin: 0.85rem 0 0 !important;
+
+    color: rgba(245, 166, 200, 0.58) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.62rem !important;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+/* Funny moment */
+
+.memory-funny {
+    margin: 0.85rem 0 0 !important;
+
+    color: rgba(255, 248, 252, 0.62) !important;
+
+    font-size: 0.68rem !important;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+/* Kiss quote */
+
+.memory-quote {
+    margin: 1rem 0 0 !important;
+
+    padding-left: 0.8rem;
+
+    border-left: 2px solid rgba(245, 166, 200, 0.35);
+
+    color: rgba(255, 248, 252, 0.72) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.78rem !important;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+/* Hair joke */
+
+.memory-hair {
+    margin: 0.6rem 0 0 !important;
+
+    color: var(--pink-soft) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.95rem !important;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+/* Kiss result */
+
+.kiss-result {
+    margin-top: 1.4rem;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    border-radius: 14px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245, 166, 200, 0.10),
+            transparent 70%
+        );
+
+    text-align: center;
+}
+
+.kiss-result span {
+    font-size: 1.5rem;
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(245, 166, 200, 0.35)
+        );
+}
+
+.kiss-result strong {
+    color: rgba(245, 166, 200, 0.78);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.7rem;
+
+    font-weight: normal;
+
+    letter-spacing: 0.04em;
+}
+
+/* Ending */
+
+.firsts-ending {
+    margin-top: 3.5rem;
+
+    max-width: 400px;
+
+    text-align: center;
+}
+
+.firsts-ending > span {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--pink-soft);
+
+    font-size: 1rem;
+}
+
+.firsts-ending p {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.68);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+.firsts-ending .ending-soft {
+    margin-top: 0.45rem;
+
+    color: rgba(245, 166, 200, 0.58);
+
+    font-size: 0.68rem;
+
+    font-style: italic;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .firsts-world {
+        padding-top: 3.5rem;
+    }
+
+    .firsts-header {
+        margin-top: 1.8rem;
+    }
+
+    .firsts-intro {
+        font-size: 0.7rem;
+    }
+
+    .firsts-story {
+        margin-top: 2.3rem;
+
+        gap: 1rem;
+    }
+
+    .first-memory {
+        padding: 1.2rem 1rem 1.3rem 3.5rem;
+    }
+
+    .memory-number {
+        top: 1.2rem;
+        left: 0.9rem;
+    }
+
+    .memory-content h2 {
+        font-size: 1.05rem;
+    }
+
+    .memory-content > p:not(.memory-label):not(.memory-quote):not(.memory-hair):not(.memory-soft):not(.memory-funny) {
+        font-size: 0.64rem;
+    }
+
+    .firsts-ending {
+        margin-top: 2.8rem;
+    }
+}
