@@ -3407,3 +3407,371 @@ outline: none;
     }
 
 }
+/* =========================================
+   TWO MONTHS
+   ========================================= */
+
+#anniversary {
+    background:
+        radial-gradient(
+            circle at 50% 12%,
+            rgba(245, 166, 200, 0.10),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(245, 166, 200, 0.035),
+            transparent 45%
+        ),
+        #08060a;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.anniversary-world {
+    position: relative;
+
+    width: min(92vw, 650px);
+
+    min-height: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 5.5rem 1.2rem 4rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Back button */
+
+#anniversary .back-to-universe {
+    position: absolute;
+
+    top: 1.2rem;
+    left: 1.2rem;
+
+    z-index: 20;
+
+    display: block;
+
+    padding: 0.6rem;
+
+    border: 0;
+
+    background: transparent;
+
+    color: rgba(255, 248, 252, 0.62);
+
+    font-family: inherit;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+}
+
+/* Header */
+
+.anniversary-header {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin-top: 1.5rem;
+
+    text-align: center;
+}
+
+.anniversary-symbol {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: rgba(245, 166, 200, 0.82);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2rem;
+
+    text-shadow:
+        0 0 22px rgba(245, 166, 200, 0.32);
+}
+
+.anniversary-eyebrow {
+    margin: 0 0 0.55rem;
+
+    color: rgba(245, 166, 200, 0.52);
+
+    font-size: 0.50rem;
+
+    letter-spacing: 0.20em;
+
+    text-transform: uppercase;
+}
+
+.anniversary-header h1 {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.95);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.6rem, 11vw, 4.5rem);
+
+    font-weight: 300;
+
+    letter-spacing: 0.02em;
+
+    text-shadow:
+        0 0 35px rgba(245, 166, 200, 0.16);
+}
+
+.anniversary-intro {
+    max-width: 400px;
+
+    margin: 1rem auto 0;
+
+    color: rgba(255, 248, 252, 0.58);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.76rem;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+/* Main message */
+
+.anniversary-message {
+    width: 100%;
+
+    max-width: 530px;
+
+    margin-top: 3.5rem;
+
+    padding: 1.8rem 1.4rem 2rem;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid rgba(245, 166, 200, 0.13);
+
+    border-bottom: 1px solid rgba(245, 166, 200, 0.13);
+
+    text-align: center;
+}
+
+.anniversary-label {
+    margin: 0;
+
+    color: rgba(245, 166, 200, 0.48);
+
+    font-size: 0.50rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.anniversary-message h2 {
+    max-width: 440px;
+
+    margin: 1rem auto 0;
+
+    color: rgba(255, 248, 252, 0.90);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.35rem;
+
+    font-weight: normal;
+
+    line-height: 1.55;
+}
+
+.anniversary-message p:not(.anniversary-label):not(.anniversary-soft) {
+    max-width: 450px;
+
+    margin: 1rem auto 0;
+
+    color: rgba(255, 248, 252, 0.52);
+
+    font-size: 0.66rem;
+
+    line-height: 1.85;
+}
+
+.anniversary-soft {
+    margin: 1.2rem 0 0;
+
+    color: rgba(245, 166, 200, 0.62);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.72rem;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+/* Counter */
+
+.anniversary-counter {
+    margin-top: 3.5rem;
+
+    text-align: center;
+}
+
+.counter-label {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: rgba(255, 248, 252, 0.36);
+
+    font-size: 0.48rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.counter-number {
+    color: rgba(245, 166, 200, 0.88);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3.5rem, 16vw, 6rem);
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 35px rgba(245, 166, 200, 0.20);
+}
+
+.counter-days {
+    display: block;
+
+    margin-top: 0.5rem;
+
+    color: rgba(255, 248, 252, 0.46);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+/* Future */
+
+.anniversary-future {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-top: 4rem;
+
+    padding: 1.8rem 1.2rem 2rem;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.anniversary-future > span {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: rgba(245, 166, 200, 0.68);
+
+    font-size: 0.9rem;
+
+    text-shadow:
+        0 0 15px rgba(245, 166, 200, 0.22);
+}
+
+.future-label {
+    margin: 0;
+
+    color: rgba(245, 166, 200, 0.46);
+
+    font-size: 0.49rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.anniversary-future h2 {
+    margin: 0.75rem 0 0;
+
+    color: rgba(255, 248, 252, 0.88);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.3rem;
+
+    font-weight: normal;
+}
+
+.anniversary-future p:not(.future-label):not(.future-soft) {
+    max-width: 410px;
+
+    margin: 0.9rem auto 0;
+
+    color: rgba(255, 248, 252, 0.50);
+
+    font-size: 0.65rem;
+
+    line-height: 1.8;
+}
+
+.future-soft {
+    margin: 1.3rem 0 0;
+
+    color: rgba(245, 166, 200, 0.62);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.72rem;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+/* Ending */
+
+.anniversary-ending {
+    width: 100%;
+
+    padding: 2rem 1rem 2.5rem;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.anniversary-ending p {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.
