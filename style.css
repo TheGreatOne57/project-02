@@ -2043,3 +2043,90 @@ outline: none;
     }
 
 }
+
+/* =========================================
+   OUR FIRSTS — CHAPTER ENDING
+   ========================================= */
+
+.firsts-ending {
+    margin-top: 4rem;
+    padding: 1rem 0 3rem;
+
+    text-align: center;
+}
+
+.firsts-ending > span:first-child {
+    display: block;
+
+    margin-bottom: 1.2rem;
+
+    color: var(--pink-soft);
+
+    font-size: 1rem;
+
+    text-shadow:
+        0 0 14px rgba(245, 166, 200, 0.3);
+}
+
+.firsts-ending-title {
+    margin: 0 !important;
+
+    color: rgba(245, 166, 200, 0.52) !important;
+
+    font-size: 0.52rem !important;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+}
+
+.firsts-ending-main {
+    margin: 0.7rem 0 0 !important;
+
+    color: rgba(255, 248, 252, 0.78) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem !important;
+
+    line-height: 1.7;
+}
+
+.firsts-ending-line {
+    width: 55px;
+
+    height: 1px;
+
+    margin: 1.5rem auto;
+
+    background: rgba(245, 166, 200, 0.20);
+}
+
+.firsts-ending .ending-soft {
+    margin: 0 !important;
+
+    color: rgba(245, 166, 200, 0.58) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.68rem !important;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+.firsts-ending-heart {
+    margin-top: 1.2rem;
+
+    color: rgba(245, 166, 200, 0.65);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.5rem !important;
+
+    text-shadow:
+        0 0 15px rgba(245, 166, 200, 0.25);
+
+    animation: aftermathPulse 3s ease-in-out infinite;
+}
