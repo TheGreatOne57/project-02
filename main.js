@@ -47,6 +47,78 @@ document.addEventListener("DOMContentLoaded", () => {
     const orbitItems =
         document.querySelectorAll(".orbit-item");
 
+        /* =========================================
+       PROJECT 02 MUSIC
+       ========================================= */
+
+    const backgroundMusic =
+        document.getElementById("backgroundMusic");
+
+    const musicToggle =
+        document.getElementById("musicToggle");
+
+    let musicStarted = false;
+
+
+    function startMusic() {
+
+        if (!backgroundMusic) {
+            return;
+        }
+
+        backgroundMusic.volume = 0.55;
+
+        const playPromise = backgroundMusic.play();
+
+        if (playPromise !== undefined) {
+
+            playPromise
+                .then(() => {
+
+                    musicStarted = true;
+
+                    if (musicToggle) {
+                        musicToggle.classList.add("music-playing");
+                        musicToggle.textContent = "♫";
+                    }
+
+                })
+                .catch(() => {
+
+                    console.log("Music could not start.");
+
+                });
+
+        }
+
+    }
+
+
+    if (musicToggle) {
+
+        musicToggle.addEventListener("click", () => {
+
+            if (!backgroundMusic) {
+                return;
+            }
+
+            if (backgroundMusic.paused) {
+
+                startMusic();
+
+            } else {
+
+                backgroundMusic.pause();
+
+                musicToggle.classList.remove("music-playing");
+                musicToggle.textContent = "♪";
+
+            }
+
+        });
+
+    }
+
     const backButtons =
         document.querySelectorAll(".back-to-universe");
 
@@ -55,15 +127,17 @@ document.addEventListener("DOMContentLoaded", () => {
        ENTER THE UNIVERSE
        ========================================= */
 
-    if (enterButton) {
-
     enterButton.addEventListener("click", () => {
-        opening.classList.remove("active");
-        setTimeout(() => {
-            universe.classList.add("active");
-        }, 500);
 
-    });
+    startMusic();
+
+    opening.classList.remove("active");
+
+    setTimeout(() => {
+        universe.classList.add("active");
+    }, 500);
+
+});
 
 }
 
