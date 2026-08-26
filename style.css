@@ -3791,19 +3791,19 @@ outline: none;
 
     z-index: 9999;
 
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
-    border: 1px solid rgba(245, 166, 200, 0.22);
+    border: 1px solid rgba(245, 166, 200, 0.18);
     border-radius: 50%;
 
-    background: rgba(8, 6, 10, 0.72);
+    background: rgba(8, 6, 10, 0.62);
 
-    color: rgba(245, 166, 200, 0.78);
+    color: rgba(245, 166, 200, 0.68);
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 1rem;
+    font-size: 0.95rem;
 
     display: flex;
     align-items: center;
@@ -3814,14 +3814,22 @@ outline: none;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 
+    box-shadow:
+        0 0 18px rgba(245, 166, 200, 0.04);
+
     transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        color 0.25s ease;
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 #musicToggle:hover {
-    transform: scale(1.08);
+    transform: scale(1.06);
+
+    border-color: rgba(245, 166, 200, 0.32);
+
+    color: rgba(245, 166, 200, 0.88);
 }
 
 #musicToggle:active {
@@ -3829,10 +3837,10 @@ outline: none;
 }
 
 #musicToggle.music-playing {
-    border-color: rgba(245, 166, 200, 0.48);
+    border-color: rgba(245, 166, 200, 0.34);
 
-    color: rgba(245, 166, 200, 0.98);
+    color: rgba(245, 166, 200, 0.92);
 
-    text-shadow:
-        0 0 12px rgba(245, 166, 200, 0.45);
+    box-shadow:
+        0 0 18px rgba(245, 166, 200, 0.10);
 }
