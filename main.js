@@ -196,4 +196,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    /* =========================================
+       LOVE COUNTER
+       Relationship started: June 27, 2026
+       ========================================= */
+
+    const loveDays = document.getElementById("loveDays");
+    const loveTime = document.getElementById("loveTime");
+
+    if (loveDays && loveTime) {
+
+        const startDate = new Date(2026, 5, 27);
+
+        function updateLoveCounter() {
+
+            const now = new Date();
+
+            let months =
+                (now.getFullYear() - startDate.getFullYear()) * 12 +
+                (now.getMonth() - startDate.getMonth());
+
+            if (now.getDate() < startDate.getDate()) {
+                months--;
+            }
+
+            if (months < 0) {
+                months = 0;
+            }
+
+            loveDays.textContent =
+                String(months).padStart(2, "0");
+
+            loveTime.textContent =
+                months === 1
+                    ? "month of us"
+                    : "months of us";
+        }
+
+        updateLoveCounter();
+
+    }
+
 });
