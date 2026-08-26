@@ -134,4 +134,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+        /* =========================================
+       FIRST KISS — INTERACTIVE JOURNEY
+       ========================================= */
+
+    const kissNextButtons =
+        document.querySelectorAll(".kiss-next");
+
+    const kissFinalButton =
+        document.querySelector(".kiss-final");
+
+    const kissSteps =
+        document.querySelectorAll(".kiss-step");
+
+    const kissReveal =
+        document.querySelector(".kiss-reveal");
+
+
+    kissNextButtons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            const currentStep =
+                button.closest(".kiss-step");
+
+            const currentNumber =
+                Number(currentStep.dataset.kissStep);
+
+            const nextStep =
+                document.querySelector(
+                    `[data-kiss-step="${currentNumber + 1}"]`
+                );
+
+            if (!nextStep) {
+                return;
+            }
+
+            currentStep.classList.remove("active");
+
+            nextStep.classList.add("active");
+
+        });
+
+    });
+
+
+    if (kissFinalButton) {
+
+        kissFinalButton.addEventListener("click", () => {
+
+            const currentStep =
+                kissFinalButton.closest(".kiss-step");
+
+            currentStep.classList.remove("active");
+
+            if (kissReveal) {
+                kissReveal.classList.add("active");
+            }
+
+        });
+
+    }
+
 });
