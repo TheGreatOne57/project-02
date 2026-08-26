@@ -1073,13 +1073,20 @@ outline: none;
         #08060a;
 
     overflow-y: auto;
+    overflow-x: hidden;
+
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .firsts-world {
+    position: relative;
+
     width: min(92vw, 650px);
+
     min-height: 100%;
 
-    padding: 4.5rem 1.2rem 3.5rem;
+    padding: 5.5rem 1.2rem 3.5rem;
 
     box-sizing: border-box;
 
@@ -1093,7 +1100,7 @@ outline: none;
 #firsts .back-to-universe {
     position: absolute;
 
-    top: 1.5rem;
+    top: 1.2rem;
     left: 1.2rem;
 
     z-index: 20;
