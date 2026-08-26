@@ -2995,3 +2995,415 @@ outline: none;
     }
 
 }
+/* =========================================
+   OUR NIGHTS
+   ========================================= */
+
+#nights {
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(245, 166, 200, 0.055),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 15% 70%,
+            rgba(120, 100, 150, 0.035),
+            transparent 35%
+        ),
+        #06050a;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.nights-world {
+    position: relative;
+
+    width: min(92vw, 620px);
+
+    min-height: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 5.5rem 1.2rem 3.8rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Back button */
+
+#nights .back-to-universe {
+    position: absolute;
+
+    top: 1.2rem;
+    left: 1.2rem;
+
+    z-index: 20;
+
+    display: block;
+
+    padding: 0.6rem;
+
+    border: 0;
+
+    background: transparent;
+
+    color: rgba(255, 248, 252, 0.60);
+
+    font-family: inherit;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+}
+
+/* Header */
+
+.nights-header {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-top: 1.5rem;
+
+    text-align: center;
+}
+
+.nights-moon {
+    display: block;
+
+    margin-bottom: 1.1rem;
+
+    color: rgba(245, 166, 200, 0.70);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.8rem;
+
+    text-shadow:
+        0 0 20px rgba(245, 166, 200, 0.25);
+
+    transform: rotate(-15deg);
+}
+
+.nights-eyebrow {
+    margin: 0 0 0.55rem;
+
+    color: rgba(255, 248, 252, 0.36);
+
+    font-size: 0.50rem;
+
+    letter-spacing: 0.20em;
+
+    text-transform: uppercase;
+}
+
+.nights-header h1 {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.92);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 9vw, 3.8rem);
+
+    font-weight: 300;
+
+    letter-spacing: 0.03em;
+
+    text-shadow:
+        0 0 30px rgba(245, 166, 200, 0.12);
+}
+
+.nights-intro {
+    max-width: 410px;
+
+    margin: 1rem auto 0;
+
+    color: rgba(255, 248, 252, 0.48);
+
+    font-size: 0.69rem;
+
+    line-height: 1.85;
+}
+
+/* Story */
+
+.nights-story {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 3.4rem;
+}
+
+/* Night line */
+
+.nights-story::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 1.15rem;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(245, 166, 200, 0.13) 8%,
+            rgba(245, 166, 200, 0.13) 92%,
+            transparent
+        );
+}
+
+/* Memories */
+
+.night-memory {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 2.3rem 1fr;
+
+    gap: 1rem;
+
+    margin-bottom: 1.6rem;
+
+    padding: 1.2rem 1rem 1.25rem 0.2rem;
+
+    border: 1px solid rgba(245, 166, 200, 0.075);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.015),
+            rgba(245, 166, 200, 0.018)
+        );
+
+    box-sizing: border-box;
+}
+
+.night-memory:last-child {
+    margin-bottom: 0;
+}
+
+.night-number {
+    position: relative;
+
+    z-index: 2;
+
+    width: 1.9rem;
+    height: 1.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0.15rem;
+
+    border: 1px solid rgba(245, 166, 200, 0.14);
+
+    border-radius: 50%;
+
+    background: #06050a;
+
+    color: rgba(245, 166, 200, 0.55);
+
+    font-size: 0.47rem;
+
+    letter-spacing: 0.04em;
+}
+
+.night-content {
+    min-width: 0;
+}
+
+.night-label {
+    margin: 0;
+
+    color: rgba(245, 166, 200, 0.46);
+
+    font-size: 0.48rem;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.night-content h2 {
+    margin: 0.55rem 0 0;
+
+    color: rgba(255, 248, 252, 0.86);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    font-weight: normal;
+
+    line-height: 1.4;
+}
+
+.night-content p:not(.night-label):not(.night-soft) {
+    margin: 0.7rem 0 0;
+
+    color: rgba(255, 248, 252, 0.48);
+
+    font-size: 0.63rem;
+
+    line-height: 1.75;
+}
+
+.night-soft {
+    margin: 0.6rem 0 0;
+
+    color: rgba(245, 166, 200, 0.55);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.65rem;
+
+    font-style: italic;
+
+    line-height: 1.65;
+}
+
+/* Ending */
+
+.nights-ending {
+    width: 100%;
+
+    max-width: 450px;
+
+    margin-top: 3.8rem;
+
+    padding: 0.5rem 1rem 2.5rem;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.nights-ending-star {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: rgba(245, 166, 200, 0.62);
+
+    font-size: 0.85rem;
+
+    text-shadow:
+        0 0 15px rgba(245, 166, 200, 0.22);
+}
+
+.nights-ending p {
+    margin: 0;
+
+    color: rgba(255, 248, 252, 0.55);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.76rem;
+
+    font-style: italic;
+
+    line-height: 1.75;
+}
+
+.nights-ending-main {
+    margin-top: 0.55rem !important;
+
+    color: rgba(255, 248, 252, 0.76) !important;
+
+    font-size: 0.90rem !important;
+
+    font-style: normal !important;
+}
+
+.nights-ending-heart {
+    display: block;
+
+    margin-top: 1.4rem;
+
+    color: rgba(245, 166, 200, 0.60);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.5rem;
+
+    text-shadow:
+        0 0 18px rgba(245, 166, 200, 0.24);
+
+    animation: nightsHeartPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes nightsHeartPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.08);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .nights-world {
+        padding-top: 5rem;
+    }
+
+    .nights-header {
+        margin-top: 1.2rem;
+    }
+
+    .nights-intro {
+        font-size: 0.67rem;
+    }
+
+    .nights-story {
+        margin-top: 2.8rem;
+    }
+
+    .night-memory {
+        grid-template-columns: 2.2rem 1fr;
+
+        gap: 0.85rem;
+
+        padding-right: 0.85rem;
+    }
+
+    .night-content h2 {
+        font-size: 0.93rem;
+    }
+
+}
