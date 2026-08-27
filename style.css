@@ -4068,3 +4068,24 @@ outline: none;
     box-shadow:
         0 0 18px rgba(245, 166, 200, 0.10);
 }
+/* =========================================
+   PROJECT 02 — UNIVERSE POLISH
+   Subtle interaction lift
+   ========================================= */
+
+#universe .orbit-item {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#universe .orbit-item:focus-visible .orbit-icon {
+    border-color: rgba(245, 166, 200, 0.55);
+
+    box-shadow:
+        0 0 22px rgba(245, 166, 200, 0.16),
+        inset 0 0 14px rgba(245, 166, 200, 0.05);
+}
+
+#universe .orbit-item:focus-visible {
+    filter:
+        drop-shadow(0 0 14px rgba(245, 166, 200, 0.25));
+}
