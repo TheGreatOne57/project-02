@@ -19,11 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         particle.style.left = `${Math.random() * 100}%`;
 
-        particle.style.animationDuration =
-            `${8 + Math.random() * 12}s`;
+particle.style.top = `${Math.random() * 100}%`;
 
-        particle.style.animationDelay =
-            `${Math.random() * 10}s`;
+particle.style.animationDuration =
+    `${8 + Math.random() * 12}s`;
+
+particle.style.animationDelay =
+    `${Math.random() * 10}s`;
 
         const size = 1 + Math.random() * 2;
 
