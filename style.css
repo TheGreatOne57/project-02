@@ -731,10 +731,6 @@ outline: none;
     transform: translateY(-1px);
 }
 
-#universe .orbit-item:active {
-    transform: scale(0.98);
-}
-
 /* =========================================
    ORBIT ANIMATION
    ========================================= */
