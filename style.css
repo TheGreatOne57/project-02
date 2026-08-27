@@ -71,53 +71,82 @@ body {
     background:
         radial-gradient(
             circle at center,
-            rgba(245, 166, 200, 0.08),
-            transparent 35%
+            rgba(245, 166, 200, 0.10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 50% 48%,
+            rgba(120, 80, 110, 0.06),
+            transparent 58%
         ),
         #08060a;
 }
 
 .opening-content {
+    position: relative;
+
     text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 2rem;
+
+    animation: openingContentIn 1.4s ease both;
 }
 
 .number {
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: clamp(6rem, 25vw, 11rem);
+
     font-weight: 300;
+
     line-height: 0.8;
+
     letter-spacing: 0.05em;
 
     color: var(--white);
 
     text-shadow:
-        0 0 20px var(--glow),
-        0 0 60px rgba(245, 166, 200, 0.15);
+        0 0 20px rgba(245, 166, 200, 0.35),
+        0 0 55px rgba(245, 166, 200, 0.18),
+        0 0 100px rgba(245, 166, 200, 0.08);
 
-    animation: numberGlow 4s ease-in-out infinite;
+    animation:
+        numberGlow 4s ease-in-out infinite,
+        numberReveal 1.4s ease both;
 }
 
 .subtitle {
-    margin-top: 1.2rem;
+    margin-top: 1.35rem;
 
     font-size: clamp(1.2rem, 5vw, 1.8rem);
 
     letter-spacing: 0.45em;
+
     text-transform: uppercase;
 
     color: var(--pink-soft);
+
+    opacity: 0;
+
+    animation: openingFadeUp 1s ease 0.45s forwards;
 }
 
 .small-text {
     margin-top: 0.7rem;
 
     font-size: 1rem;
+
     font-style: italic;
 
     color: var(--muted);
+
+    opacity: 0;
+
+    animation: openingFadeUp 1s ease 0.7s forwards;
 }
 
 /* =========================================
@@ -165,6 +194,7 @@ body {
    ========================================= */
 
 @keyframes numberGlow {
+
     0%,
     100% {
         transform: scale(1);
@@ -175,19 +205,51 @@ body {
         transform: scale(1.025);
         opacity: 1;
     }
+
 }
 
-@keyframes heartPulse {
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.8;
+@keyframes openingContentIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(14px);
     }
 
-    50% {
-        transform: scale(1.15);
+    to {
         opacity: 1;
+        transform: translateY(0);
     }
+
+}
+
+@keyframes numberReveal {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+}
+
+@keyframes openingFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 /* =========================================
