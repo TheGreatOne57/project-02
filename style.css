@@ -355,6 +355,23 @@ body {
 
 }
 
+@keyframes centerGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 30px rgba(245, 166, 200, 0.08),
+            inset 0 0 24px rgba(245, 166, 200, 0.035);
+    }
+
+    50% {
+        box-shadow:
+            0 0 42px rgba(245, 166, 200, 0.13),
+            inset 0 0 28px rgba(245, 166, 200, 0.05);
+    }
+
+}
+
 /* =========================================
    THE LITTLE UNIVERSE
    ========================================= */
@@ -455,18 +472,26 @@ body {
     background:
         radial-gradient(
             circle,
-            rgba(245, 166, 200, 0.10),
-            transparent 68%
+            rgba(245, 166, 200, 0.13),
+            rgba(245, 166, 200, 0.04) 48%,
+            transparent 72%
         );
+
+    box-shadow:
+        0 0 30px rgba(245, 166, 200, 0.08),
+        inset 0 0 24px rgba(245, 166, 200, 0.035);
 
     font-size: clamp(1.6rem, 6vw, 2.3rem);
 
     letter-spacing: 0.08em;
 
     text-shadow:
-        0 0 18px rgba(245, 166, 200, 0.30);
+        0 0 18px rgba(245, 166, 200, 0.30),
+        0 0 35px rgba(245, 166, 200, 0.10);
 
     z-index: 3;
+
+    animation: centerGlow 5s ease-in-out infinite;
 }
 
 #universe .center-heart .heart {
