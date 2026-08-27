@@ -3777,7 +3777,14 @@ outline: none;
 .anniversary-ending p {
     margin: 0;
 
-    color: rgba(255, 248, 252, 0.
+    color: rgba(255, 248, 252, 0.82);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
 
 /* =========================================
    PROJECT 02 MUSIC CONTROL
