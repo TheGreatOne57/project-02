@@ -3189,26 +3189,53 @@ outline: none;
 
     gap: 1rem;
 
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.45rem;
 
-    padding: 1.2rem 1rem 1.25rem 0.2rem;
+    padding: 1.35rem 1rem 1.4rem 0.2rem;
 
-    border: 1px solid rgba(245, 166, 200, 0.075);
+    border: 1px solid rgba(245, 166, 200, 0.085);
 
     border-radius: 20px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.015),
-            rgba(245, 166, 200, 0.018)
-        );
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(245, 166, 200, 0.035),
+            transparent 48%
+        ),
+        rgba(255, 255, 255, 0.012);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
 
     box-sizing: border-box;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .night-memory:last-child {
     margin-bottom: 0;
+}
+
+.night-memory:active {
+    transform: translateX(3px);
+
+    border-color: rgba(245, 166, 200, 0.18);
+
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(245, 166, 200, 0.065),
+            transparent 52%
+        ),
+        rgba(255, 255, 255, 0.018);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.16);
 }
 
 .night-number {
@@ -3220,22 +3247,31 @@ outline: none;
     height: 1.9rem;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     margin-left: 0.15rem;
 
-    border: 1px solid rgba(245, 166, 200, 0.14);
+    border: 1px solid rgba(245, 166, 200, 0.17);
 
     border-radius: 50%;
 
-    background: #06050a;
+    background:
+        radial-gradient(
+            circle,
+            rgba(245, 166, 200, 0.055),
+            #06050a 72%
+        );
 
-    color: rgba(245, 166, 200, 0.55);
+    color: rgba(245, 166, 200, 0.62);
 
     font-size: 0.47rem;
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
+
+    box-shadow:
+        0 0 15px rgba(245, 166, 200, 0.035);
 }
 
 .night-content {
@@ -3245,19 +3281,21 @@ outline: none;
 .night-label {
     margin: 0;
 
-    color: rgba(245, 166, 200, 0.46);
+    color: rgba(245, 166, 200, 0.48);
 
     font-size: 0.48rem;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.17em;
+
+    line-height: 1.4;
 
     text-transform: uppercase;
 }
 
 .night-content h2 {
-    margin: 0.55rem 0 0;
+    margin: 0.6rem 0 0;
 
-    color: rgba(255, 248, 252, 0.86);
+    color: rgba(255, 248, 252, 0.89);
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -3265,23 +3303,23 @@ outline: none;
 
     font-weight: normal;
 
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 .night-content p:not(.night-label):not(.night-soft) {
-    margin: 0.7rem 0 0;
+    margin: 0.72rem 0 0;
 
-    color: rgba(255, 248, 252, 0.48);
+    color: rgba(255, 248, 252, 0.50);
 
     font-size: 0.63rem;
 
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .night-soft {
-    margin: 0.6rem 0 0;
+    margin: 0.62rem 0 0;
 
-    color: rgba(245, 166, 200, 0.55);
+    color: rgba(245, 166, 200, 0.58);
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -3289,7 +3327,7 @@ outline: none;
 
     font-style: italic;
 
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 /* Ending */
