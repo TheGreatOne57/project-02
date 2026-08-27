@@ -3297,67 +3297,80 @@ outline: none;
 .nights-ending {
     width: 100%;
 
-    max-width: 450px;
+    max-width: 500px;
 
-    margin-top: 3.8rem;
+    margin-top: 4rem;
 
-    padding: 0.5rem 1rem 2.5rem;
+    padding: 1.2rem 1.1rem 3.2rem;
 
     box-sizing: border-box;
 
     text-align: center;
+
+    border-top: 1px solid rgba(245, 166, 200, 0.09);
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(245, 166, 200, 0.035),
+            transparent 70%
+        );
 }
 
 .nights-ending-star {
     display: block;
 
-    margin-bottom: 1rem;
+    margin-bottom: 1.15rem;
 
-    color: rgba(245, 166, 200, 0.62);
+    color: rgba(245, 166, 200, 0.68);
 
     font-size: 0.85rem;
 
     text-shadow:
-        0 0 15px rgba(245, 166, 200, 0.22);
+        0 0 18px rgba(245, 166, 200, 0.24);
 }
 
 .nights-ending p {
     margin: 0;
 
-    color: rgba(255, 248, 252, 0.55);
+    color: rgba(255, 248, 252, 0.56);
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 0.76rem;
+    font-size: 0.78rem;
 
     font-style: italic;
 
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .nights-ending-main {
-    margin-top: 0.55rem !important;
+    max-width: 380px;
 
-    color: rgba(255, 248, 252, 0.76) !important;
+    margin: 0.65rem auto 0 !important;
 
-    font-size: 0.90rem !important;
+    color: rgba(255, 248, 252, 0.80) !important;
+
+    font-size: 0.94rem !important;
 
     font-style: normal !important;
+
+    line-height: 1.65 !important;
 }
 
 .nights-ending-heart {
     display: block;
 
-    margin-top: 1.4rem;
+    margin-top: 1.5rem;
 
-    color: rgba(245, 166, 200, 0.60);
+    color: rgba(245, 166, 200, 0.64);
 
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 1.5rem;
 
     text-shadow:
-        0 0 18px rgba(245, 166, 200, 0.24);
+        0 0 20px rgba(245, 166, 200, 0.25);
 
     animation: nightsHeartPulse 3.5s ease-in-out infinite;
 }
