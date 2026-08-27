@@ -3490,10 +3490,9 @@ outline: none;
 
 .anniversary-header {
     width: 100%;
-
     max-width: 520px;
 
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 
     text-align: center;
 }
@@ -3501,26 +3500,27 @@ outline: none;
 .anniversary-symbol {
     display: block;
 
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
 
-    color: rgba(245, 166, 200, 0.82);
+    color: rgba(245, 166, 200, 0.88);
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 2rem;
+    font-size: 2.15rem;
 
     text-shadow:
-        0 0 22px rgba(245, 166, 200, 0.32);
+        0 0 22px rgba(245, 166, 200, 0.32),
+        0 0 45px rgba(245, 166, 200, 0.10);
 }
 
 .anniversary-eyebrow {
-    margin: 0 0 0.55rem;
+    margin: 0 0 0.65rem;
 
-    color: rgba(245, 166, 200, 0.52);
+    color: rgba(245, 166, 200, 0.58);
 
     font-size: 0.50rem;
 
-    letter-spacing: 0.20em;
+    letter-spacing: 0.22em;
 
     text-transform: uppercase;
 }
@@ -3528,26 +3528,27 @@ outline: none;
 .anniversary-header h1 {
     margin: 0;
 
-    color: rgba(255, 248, 252, 0.95);
+    color: rgba(255, 248, 252, 0.97);
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(2.6rem, 11vw, 4.5rem);
+    font-size: clamp(2.7rem, 11vw, 4.5rem);
 
     font-weight: 300;
 
     letter-spacing: 0.02em;
 
     text-shadow:
-        0 0 35px rgba(245, 166, 200, 0.16);
+        0 0 35px rgba(245, 166, 200, 0.18),
+        0 0 70px rgba(245, 166, 200, 0.06);
 }
 
 .anniversary-intro {
     max-width: 400px;
 
-    margin: 1rem auto 0;
+    margin: 1.15rem auto 0;
 
-    color: rgba(255, 248, 252, 0.58);
+    color: rgba(255, 248, 252, 0.62);
 
     font-family: Georgia, "Times New Roman", serif;
 
