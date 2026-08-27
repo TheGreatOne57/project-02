@@ -656,22 +656,30 @@ outline: none;
 #universe .orbit-item:hover,
 #universe .orbit-item:active {
     filter:
-        drop-shadow(0 0 14px rgba(245, 166, 200, 0.3));
+        drop-shadow(0 0 16px rgba(245, 166, 200, 0.35));
 }
 
 #universe .orbit-item:hover .orbit-icon,
 #universe .orbit-item:active .orbit-icon {
-    border-color: rgba(245, 166, 200, 0.5);
+    transform: scale(1.08);
+
+    border-color: rgba(245, 166, 200, 0.52);
 
     background:
         radial-gradient(
             circle,
-            rgba(245, 166, 200, 0.15),
+            rgba(245, 166, 200, 0.16),
             transparent 72%
         );
 
     box-shadow:
-        0 0 22px rgba(245, 166, 200, 0.12);
+        0 0 24px rgba(245, 166, 200, 0.15),
+        inset 0 0 12px rgba(245, 166, 200, 0.04);
+}
+
+#universe .orbit-item:hover .orbit-label,
+#universe .orbit-item:active .orbit-label {
+    color: rgba(255, 248, 252, 0.82);
 }
 
 
