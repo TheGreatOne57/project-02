@@ -721,6 +721,19 @@ outline: none;
     color: rgba(255, 248, 252, 0.82);
 }
 
+#universe .orbit-item:hover .orbit-icon,
+#universe .orbit-item:active .orbit-icon {
+    transform: scale(1.08);
+}
+
+#universe .orbit-item:hover .orbit-label,
+#universe .orbit-item:active .orbit-label {
+    transform: translateY(-1px);
+}
+
+#universe .orbit-item:active {
+    transform: scale(0.98);
+}
 
 /* =========================================
    ORBIT ANIMATION
